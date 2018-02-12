@@ -1,0 +1,36 @@
+header{
+	background-color: white;
+	color: blue;
+}
+nav{
+	background-color: lightblue;
+}
+nav>a{
+	color: white;
+	text-decoration: none;
+}
+main{
+	background-color: white;
+	color: blue;
+}
+figure{
+	background-color: lightblue;
+}
+footer{
+	background-color: white;
+	color: blue;
+}
+
+/* Mobil */
+@media screen and (max-width: 480px){
+	nav>a{
+		border-bottom: 1px solid white;
+	}
+}
+
+
+/* surfplatta */
+@media screen and (min-width: 480px) and (max-width: 1024px){
+nav>a{
+		border-bottom: 1px solid white;
+	}

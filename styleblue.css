@@ -1,0 +1,39 @@
+header{
+	background-color: #49a7cc;
+	color: black;
+}
+nav{
+	background-color: #b5ffff;
+}
+#menubutton{
+	color: black;
+}
+nav>a{
+	color: black;
+	text-decoration: none;
+}
+main{
+	background-color: white;
+	color: black;
+}
+figure{
+	background-color: #80d8ff;
+}
+footer{
+	background-color: #49a7cc;
+	color: black;
+}
+
+/* Mobil */
+@media screen and (max-width: 480px){
+	nav>a{
+		border-bottom: 1px solid white;
+	}
+}
+
+
+/* surfplatta */
+@media screen and (min-width: 480px) and (max-width: 1024px){
+nav>a{
+		border-bottom: 1px solid white;
+	}

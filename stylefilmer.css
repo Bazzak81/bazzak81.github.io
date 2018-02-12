@@ -1,0 +1,28 @@
+main{
+	text-align: center;
+}
+figure>img{
+	max-width: 100%;
+	height: auto;
+}
+#maincontainer{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer{
+	text-align: center;
+}
+
+/* Mobil */
+@media screen and (max-width: 480px){
+	#maincontainer{
+	grid-template-columns: 1fr;
+	}
+}
+/* surfplatta */
+@media screen and (min-width: 480px) and (max-width: 1024px){
+	#maincontainer{
+	grid-template-columns: 1fr 1fr;
+	}
+}
