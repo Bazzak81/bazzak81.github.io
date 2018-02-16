@@ -1,5 +1,6 @@
 var menuShow = false; 																	//Boolean to se if menu is showing or is hidden
-var styleList;									 										
+var styleList;
+style();									 										
 	
 window.onload = function(){																//Function that runs after page has loaded.
 	styleList = document.querySelector("select");
