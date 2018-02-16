@@ -1,9 +1,13 @@
 main{
 	text-align: center;
 }
+figure{
+	display:grid;
+}
 figure>img{
 	max-width: 100%;
 	height: auto;
+	margin: auto;
 }
 #maincontainer{
 	display: grid;
