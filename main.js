@@ -1,27 +1,27 @@
 var menuShow = false; 																	//Boolean to se if menu is showing or is hidden
-var list;									 											//Sets style dropdown to current style-name
+var styleList;									 										
 	
 window.onload = function(){																//Function that runs after page has loaded.
-	list = document.querySelector("select");
+	styleList = document.querySelector("select");
 	document.querySelector("select").addEventListener("change", changeStyle, false); 	//Adds listener to style dropdown	
-	list.value = localStorage.getItem("style");
+	styleList.value = localStorage.getItem("style");
 	document.querySelector("#menubutton").addEventListener("click", showMenu, false);
 	style();
 }
 
 
 function changeStyle(){																	//Function that runs when style dropdown has been changed by user
-	document.querySelector("#style").setAttribute("href","style"+list.value+".css");
-	localStorage.setItem("style", list.value);											//Saves selected value in locakStorage
+	document.querySelector("#style").setAttribute("href","style"+styleList.value+".css");
+	localStorage.setItem("style", styleList.value);											//Saves selected value in locakStorage
 }	
 
 function style(){
 	if(localStorage.getItem("style") != null){ 												//Find stored color style in localStorage and overides it in HTML file.
 		document.querySelector("#style").setAttribute("href","style"+localStorage.getItem("style")+".css");
-		list.value = localStorage.getItem("style");
+		styleList.value = localStorage.getItem("style");
 	}else {
 		document.querySelector("#style").setAttribute("href","stylegrey.css");
-		list.value = "grey";
+		styleList.value = "grey";
 	}
 }
 
