@@ -1,0 +1,24 @@
+main>div{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	
+}
+
+#block1{
+	grid-column: 2/3;
+}
+
+#block1>img{
+	
+}
+
+
+/* Mobil */
+@media screen and (max-width: 480px){
+	main>div{
+		grid-template-columns: 1fr;
+	}
+	#block3{
+		grid-column: 1/2;
+	}
+}
