@@ -7,18 +7,28 @@ main>div{
 #block1{
 	grid-column: 2/3;
 }
-
 #block1>img{
-	
+	max-width: 100%;
+	height: auto;
+	margin: auto;
 }
-
 
 /* Mobil */
 @media screen and (max-width: 480px){
 	main>div{
 		grid-template-columns: 1fr;
 	}
-	#block3{
-		grid-column: 1/2;
+	#block1{
+		grid-column: 1;
+	}
+}
+
+/* surfplatta */
+@media screen and (min-width: 480px) and (max-width: 1024px){
+	main>div{
+	grid-template-columns: 1fr;
+	}
+	#block1{
+		grid-column: 1;
 	}
 }
