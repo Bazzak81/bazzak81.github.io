@@ -1,9 +1,11 @@
-#main{
+#main {
     margin-left: 10px;
 }
-#temperaturblock>*{
+
+#temperaturblock>* {
     display: inline-block;
 }
-#weatherblock>*{
+
+#weatherblock>* {
     display: inline-block;
 }
