@@ -26,7 +26,7 @@ function getWeather(lat, lon) {
         dataType: "JSON"
     }).done(function(data) {
         document.getElementById("temp").innerHTML = data.main.temp;
-        document.getElementById("weather_image").src = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+        document.getElementById("weather_image").src = "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
         document.getElementById("weather").innerHTML = data.weather[0].description;
         console.log(data.weather[0].icon);
         console.log("Ajax-anrop klart, lyckades!");
