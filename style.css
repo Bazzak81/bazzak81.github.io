@@ -1,5 +1,5 @@
-#main {
-    margin-left: 10px;
+main>* {
+    margin-left: 20px;
 }
 
 #temperaturblock>* {
