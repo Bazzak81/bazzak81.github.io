@@ -22,7 +22,7 @@ function showError() {
 
 function getWeather(lat, lon) {
     $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?lat=" + parseInt(lat) + "&lon=" + parseInt(lon) + "&APPID=92d45b077fa249614bfc79c61cf8b50f&units=metric",
+        url: "https://api.openweathermap.org/data/2.5/weather?lat=" + parseInt(lat) + "&lon=" + parseInt(lon) + "&APPID=92d45b077fa249614bfc79c61cf8b50f&units=metric",
         dataType: "JSON"
     }).done(function(data) {
         document.getElementById("temp").innerHTML = data.main.temp;
