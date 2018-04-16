@@ -1,3 +1,6 @@
+#main{
+    margin-left: 10px;
+}
 #temperaturblock>*{
     display: inline-block;
 }
