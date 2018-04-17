@@ -1,0 +1,10 @@
+main>* {
+    margin-left: 20px;
+}
+
+.media-object {
+    width: auto;
+    height: 50%;
+}
+
+.media-left media-middle {}
