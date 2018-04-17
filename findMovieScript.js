@@ -8,7 +8,7 @@ function searchButton() {
         url: "https://www.omdbapi.com/?apikey=bc059aff&s=" + searchString,
         dataType: "JSON"
     }).done(function(data) {
-        console.log(data.Search.length);
+        console.log(data.Search[0]);
         console.log(data.Search[0].Title);
         var mediaData = '';
         for (var i = 0; i < data.Search.length; i++) {
@@ -25,6 +25,17 @@ function searchButton() {
             mediaData += data.Search[i].Title;
             mediaData += ' (' + data.Search[i].Year + ')';
             mediaData += '</h6>';
+
+            //  mediaData += '<button type="button" class="btn" id="button';
+            //mediaData += i;
+            //mediaData += '>Favorit';
+            //mediaData += '</button>';
+            mediaData += '</div>';
+            mediaData += '<div class="media-right media-middle">';
+            mediaData += '<button type="button" id="button';
+            mediaData += i;
+            mediaData += '">Favorit';
+            mediaData += '</button>';
             mediaData += '</div>';
             mediaData += '</div>';
             mediaData += '<hr>';
