@@ -5,7 +5,7 @@ function searchButton() {
     console.log(searchString);
 
     $.ajax({
-        url: "http://www.omdbapi.com/?apikey=bc059aff&s=" + searchString,
+        url: "https://www.omdbapi.com/?apikey=bc059aff&s=" + searchString,
         dataType: "JSON"
     }).done(function(data) {
         console.log(data.Search.length);
