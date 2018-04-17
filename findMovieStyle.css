@@ -3,6 +3,6 @@ main>* {
 }
 
 .media-object {
-    width: 50%;
+    width: 100px;
     height: auto;
 }

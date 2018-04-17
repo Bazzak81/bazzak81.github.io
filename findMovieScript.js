@@ -13,7 +13,7 @@ function searchButton() {
         var mediaData = '';
         for (var i = 0; i < data.Search.length; i++) {
             mediaData += '<div class="media">';
-            mediaData += '<div class="media-left media-middle">';
+            mediaData += '<div class="media-left">';
             mediaData += '<a href="image">';
             mediaData += '<img class="media-object" src="'
             mediaData += data.Search[i].Poster;
@@ -23,6 +23,7 @@ function searchButton() {
             mediaData += '<div class="media-body">';
             mediaData += '<h6 class="media-heading">';
             mediaData += data.Search[i].Title;
+            mediaData += ' (' + data.Search[i].Year + ')';
             mediaData += '</h6>';
             mediaData += '</div>';
             mediaData += '</div>';
