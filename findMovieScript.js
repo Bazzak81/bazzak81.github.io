@@ -15,10 +15,8 @@ $(document).ready(function() {
 function searchButton() {
     console.log("Knappen tryckt");
     var search = document.getElementById("searchString").value;
+    search = search.trim();
     var searchString = search.split(' ').join('+');
-    if (searchString.substring(searchString.length - 1) == "+") {
-        searchString = searchString.substring(0, searchString.length - 1);
-    }
     console.log(searchString);
 
     $.ajax({
