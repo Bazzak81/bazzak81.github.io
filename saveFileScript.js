@@ -33,6 +33,7 @@ $("#myForm").submit(function(e) {
             alert(data.message);
         }
     }).fail(function(data) {
+        console.log("Misslyckat!");
         console.log(data);
     })
 });
