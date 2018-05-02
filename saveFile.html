@@ -41,9 +41,15 @@
             </div>
         </form>
     -->
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" class="btn btn-default" name="fileToUpload" value="Ladda upp fil" accept="audio/*, video/*, image/*">
-            <input type="submit" class="btn btn-success" value="Ladda upp" name="submit">
+        <form action="server.php" method="post" enctype="multipart/form-data" id="myForm">
+            <select name="type">
+                <option value="">Välj typ här</option>
+                <option value="photo">Foto</option>
+                <option value="video">Video</option>
+                <option value="audio">Ljud</option>
+                </select>
+            <input type="file" class="btn btn-default" name="media" value="Ladda upp fil" accept="audio/*, video/*, image/*">
+            <input type="submit" class="btn btn-success" value="Spara media" name="submit">
         </form>
 
         <hr>

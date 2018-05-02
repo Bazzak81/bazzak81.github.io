@@ -1,27 +1,28 @@
-$("#customFile").on("change", function(e) {
-    var file = this.files[0];
-    window.log("Här 1");
-    $(this).next().text(file.name + " (Storlek: " + Math.round(file.size / (1024)) + " KB)");
+//$("#customFile").on("change", function(e) {
+//    var file = this.files[0];
+//    console.log("Här 1");
+//    $(this).next().text(file.name + " (Storlek: " + Math.round(file.size / (1024)) + " KB)");
+//});
 
-});
 
-$("#file-form").submit(function(e) {
+$("#myForm").submit(function(e) {
+    console.log("Här 1");
     e.preventDefault();
+    console.log("Här 2");
     var formData = new FormData(this);
-    window.log("Här 2");
 
     $.ajax({
-        url: 'upload.php',
-        type: 'POST',
+        //url: 'upload.php',
+        //type: 'POST',
+        url: $(this).attr("action"),
+        type: $(this).attr("method"),
         data: formData,
         dataType: "JSON",
         cache: false,
         contentType: false, // Set correct headers!
         processData: false // Do not process as strings!
     }).done(function(data) {
-
-        window.log("Här 3");
-
+        console.log(data);
         if (data.success) {
             // Lyckat!
             console.log("Lyckat!");
@@ -31,5 +32,7 @@ $("#file-form").submit(function(e) {
             // Detta gick ju inget bra
             alert(data.message);
         }
-    });
+    }).fail(function(data) {
+        console.log(data);
+    })
 });
