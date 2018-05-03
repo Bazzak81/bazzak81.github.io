@@ -28,6 +28,7 @@ $("#myForm").submit(function(e) {
             $("#customFile").next().text("Choose file");
         } else {
             // Detta gick ju inget bra
+            console.log("Detta gick ju inget bra");
             alert(data.message);
         }
     }).fail(function(data) {
