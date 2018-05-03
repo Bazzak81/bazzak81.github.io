@@ -6,9 +6,7 @@
 
 
 $("#myForm").submit(function(e) {
-    console.log("Här 1");
     e.preventDefault();
-    console.log("Här 2");
     var formData = new FormData(this);
 
     $.ajax({
