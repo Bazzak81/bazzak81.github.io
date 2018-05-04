@@ -3,7 +3,7 @@ $("#myForm").submit(function(e) {
     var formData = new FormData(this);
 
     $.ajax({
-        url: 'http://ddwap.mah.se/ag7416/server.php',
+        url: 'https://ddwap.mah.se/ag7416/server.php',
         type: $(this).attr("method"),
         data: formData,
         dataType: "JSON",
