@@ -1,6 +1,7 @@
 $("#myForm").submit(function(e) {
     e.preventDefault();
     var formData = new FormData(this);
+    //test
 
     $.ajax({
         url: 'https://ddwap.mah.se/ag7416/server.php',
