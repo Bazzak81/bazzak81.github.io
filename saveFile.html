@@ -8,7 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-
+    <link rel="icon" sizes="192x192" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
     <title>Inlämningsuppgift 2</title>
 </head>
 
@@ -22,7 +23,6 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="index.html">Start</a>
                 <a class="nav-item nav-link" href="findMovie.html">Sök film</a>
-                <a class="nav-item nav-link" href="#">Mitt filmbibliotek</a>
                 <a class="nav-item nav-link active" href="saveFile.html">Spara fil
                         <span class="sr-only">(current)</span>
                 </a>
@@ -42,24 +42,29 @@
         </form>
     -->
         <form action="server.php" method="post" enctype="multipart/form-data" id="myForm">
-            <select name="type">
+            <select name="type" id="selectType">
                 <option value="">Välj typ här</option>
                 <option value="photo">Foto</option>
                 <option value="video">Video</option>
                 <option value="audio">Ljud</option>
                 </select>
-            <input type="file" class="btn btn-default" name="media" value="Ladda upp fil" accept="audio/*, video/*, image/*">
-            <input type="submit" class="btn btn-success" value="Spara media" name="submit">
+            <input type="file" class="btn btn-default" id="chooseFile" name="media" value="Ladda upp fil" accept="audio/*, video/*, image/*">
+            <input type="submit" class="btn btn-success" value="Spara media" id="submitBtn" name="submit">
         </form>
 
         <hr>
         <!--Lägg till en lista i JavaScript-->
         <select id="showMedia">
+            <option value="showNone">Välj filer att visa</option>
             <option value="showAll">Visa alla</option>
             <option value="showPhoto">Visa foto</option>
             <option value="showVideo">Visa video</option>
             <option value="showAudio">Visa ljud</option>
         </select>
+
+        <div class="container" id="media-container">
+            <div class="row" id="media-row"></div>
+        </div>
 
     </main>
 
