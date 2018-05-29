@@ -41,13 +41,15 @@
             </div>
         </form>
     -->
-        <form action="server.php" method="post" enctype="multipart/form-data" id="myForm">
+        <form action="server.php" method="post" enctype="multipart/form-data" id="myForm" class="input-group">
+            <input class="form-control form-margin col-4" type="text" name="title" id="title" placeholder="Ange en titel">
             <select name="type" id="selectType">
                 <option value="">Välj typ här</option>
                 <option value="photo">Foto</option>
                 <option value="video">Video</option>
                 <option value="audio">Ljud</option>
                 </select>
+
             <input type="file" class="btn btn-default" id="chooseFile" name="media" value="Ladda upp fil" accept="audio/*, video/*, image/*">
             <input type="submit" class="btn btn-success" value="Spara media" id="submitBtn" name="submit">
         </form>

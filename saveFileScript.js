@@ -38,6 +38,8 @@ function checkForm() {
     } else if ($("#chooseFile").val() == "") {
         window.alert("Välj en fil att spara");
         return false;
+    } else if ($("#title").val() == "") {
+        return false
     } else {
         return true;
     }
@@ -92,7 +94,7 @@ function getImages() {
                     var filepath = images[i].path;
                     console.log(filepath);
                     var title = images[i].title;
-                    $("#media-row").append('<div class="col-lg-4 col-sm-6">\
+                    $("#media-row").append('<div class="col-lg-4 col-sm-6 row align-items-center">\
                     <div class="container" id="card-container"><p>' + title + '</p><img src="https://ddwap.mah.se/ag7416/' +
                         filepath + '" class="img-thumbnail" alt="Sparad bild' + title + '"></div></div>');
                 }
@@ -121,9 +123,9 @@ function getVideo() {
                 for (var i in videos) {
                     var filepath = videos[i].path;
                     var title = videos[i].title;
-                    $("#media-row").append('<div class="col-lg-4 col-sm-6">\
+                    $("#media-row").append('<div class="col-lg-4 col-sm-6 row align-items-center">\
                         <div id="card-container"><p>' + title +
-                        '</p><video width="300" height="280" controls><source src="https://ddwap.mah.se/ag7416/' +
+                        '</p><video width="250" height="150" controls><source src="https://ddwap.mah.se/ag7416/' +
                         filepath + '" type="video/mp4">Your browser does not support the video tag.</video></div></div>');
                 }
             } else {
@@ -151,7 +153,7 @@ function getAudio() {
                 for (var i in sounds) {
                     var filepath = sounds[i].path;
                     var title = sounds[i].title;
-                    $("#media-row").append('<div class="col-lg-4 col-sm-6">\
+                    $("#media-row").append('<div class="col-lg-4 col-sm-6 row align-items-center">\
                          <div id="card-container"><p>' +
                         title + '</p><audio controls><source src="https://ddwap.mah.se/ag7416/' +
                         filepath + '" type="audio/mp3">Your browser does not support the audio tag.</audio></div></div>');
