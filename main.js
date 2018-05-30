@@ -5,7 +5,7 @@ $(document).ready(function() {
         alert("Din webbläsare stödjer inte geolocation");
     }
 });
-
+// hämtar geo-possitionen
 function showPosition(position) {
     JSON.stringify(position);
     var lat = position.coords.latitude;
@@ -19,7 +19,7 @@ function showPosition(position) {
 function showError() {
     alert("Did not get a response");
 }
-
+// hämtar väder info från api för nuvarande possition
 function getWeather(lat, lon) {
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather?lat=" + parseInt(lat) + "&lon=" + parseInt(lon) + "&APPID=92d45b077fa249614bfc79c61cf8b50f&units=metric",

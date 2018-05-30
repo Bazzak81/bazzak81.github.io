@@ -8,8 +8,8 @@ $("#myForm").submit(function(e) {
             data: formData,
             dataType: "JSON",
             cache: false,
-            contentType: false, // Set correct headers!
-            processData: false // Do not process as strings!
+            contentType: false,
+            processData: false
         }).done(function(data) {
             console.log(data);
             if (data.success) {
@@ -30,7 +30,7 @@ $("#myForm").submit(function(e) {
         })
     }
 });
-
+// kontrolerar så all info finns i alla fälten
 function checkForm() {
     if ($("#selectType").val() == "") {
         window.alert("Välj typ av fil");
@@ -45,18 +45,23 @@ function checkForm() {
     }
 }
 
+// om dropdown för visa media ändras så körs funktionen
 $("#showMedia").change(function showMedia() {
-
     emptyMedia();
 
+    // om inga ska visas så visas inga filer
     if ($(this).val() == "showNone") {
         console.log("EMPTY");
         emptyMedia();
+
+        // om alla ska visas så hämtas alla filer
     } else if ($(this).val() == "showAll") {
         console.log("ALL");
         getImages();
         getAudio();
         getVideo();
+
+        // annars om enbart bilder ska visas hämtas bara bilder
     } else if ($(this).val() == "showPhoto") {
         console.log("IMAGE");
         getImages();
@@ -76,7 +81,7 @@ $("#showMedia").change(function showMedia() {
 function emptyMedia() {
     $("#media-row").empty();
 }
-
+// Hämtar alla bildfiler som är sparade och lägger till dem så att de visas för användaren
 function getImages() {
     var httpRequest = new XMLHttpRequest();
 

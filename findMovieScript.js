@@ -10,8 +10,7 @@ $(document).ready(function() {
 
     }
 });
-
-
+// funktionen skickar en sökning till omdb api för filmer och visar resultatet
 function searchButton() {
     console.log("Knappen tryckt");
     var search = document.getElementById("searchString").value;
@@ -59,7 +58,7 @@ function searchButton() {
 
     });
 }
-
+// lägger till en film som favorit, sparar den i local storage och lägger till den i menyn
 var buttonId = function() {
     console.log("Favorit id " + this.id);
     if (localStorage.getItem("favorit") == null) {
